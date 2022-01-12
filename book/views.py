@@ -36,7 +36,7 @@ def update_book(request, book_id):
     return render(request, 'book/upload_form.html', {'upload_form': book_form})
 
 
-def delete_book(book_id):
+def delete_book(request, book_id):
     book_id = int(book_id)
     try:
         book_sel = Book.objects.get(id=book_id)
